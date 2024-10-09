@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<h1 style="background-color:Tomato;">Smile</h1>
+<html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--Get your own code at fontawesome.com-->
+</head>
+<body>
+
+    
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Insert Image</title>
+    
+
+ <h1>My Picture</h1>
+        
+        <!-- Insert an image with the src attribute pointing to the image file -->
+        <img src="data.png" alt="Description of the image" width="500" height="300">
+    
+    </body>
+    </html>
+
+    <html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Button</title>
+    <style>
+        /* Basic styling for the button */
+        .nav-button {
+            background-color: #4CAF50; /* Green background */
+            border: none; /* No border */
+            color: white; /* White text */
+            padding: 15px 32px; /* Button size */
+            text-align: center;
+            text-decoration: none; /* Remove underline */
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 8px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Navigation Button Example</h1>
+
+    <!-- Navigation button that links to another page -->
+    <a href="https://example.com" class="nav-button">Go to Example.com</a>
+
+</body>
+</html>
+    
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Video</title>
+</head>
+<body>
+
+    <h1>My Video</h1>
+
+    <!-- Video element with controls -->
+    <video width="640" height="360" controls>
+        <source src="video.mp4" type="video/mp4">
+        <!-- Optional: Add a second source for browsers that don't support MP4 -->
+        <source src="video.ogg" type="video/ogg">
+        <!-- Fallback text if the browser doesn't support the video tag -->
+        Your browser does not support the video tag.
+    </video>
+
+</body>
+</html>
+
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background Example</title>
+    <style>
+        /* Styling to make the video cover the background */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Full-screen video */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        /* Optional: Styling for the page content */
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 20%;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video element as the background -->
+    <video class="video-bg" autoplay muted loop>
+        <source src="INSERT" type="video/mp4">
+        <!-- Fallback message if the video is not supported -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content on top of the video -->
+    <div class="content">
+        <h1>Welcome to University XYZ</h1>
+        <p>Shaping futures, one student at a time.</p>
+    </div>
+
+</body>
+</html>
+
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Link Example</title>
+</head>
+<body>
+
+    <h1>Visit Wikipedia</h1>
+    
+    <!-- Link to a Wikipedia page -->
+    <p>Click the link below to visit the Wikipedia page for <strong>HTML</strong>:</p>
+    <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML - Wikipedia</a>
+
+</body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styled Button</title>
+    <style>
+        /* Basic styling for the button */
+        .custom-button {
+            background-color: #4CAF50; /* Green background */
+            border: none; /* Remove border */
+            color: white; /* White text */
+            padding: 15px 32px; /* Padding inside the button */
+            text-align: center; /* Center the text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make it an inline element */
+            font-size: 16px; /* Font size */
+            margin: 4px 2px; /* Some margin */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 8px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition on hover */
+        }
+
+        /* Change background color when the user hovers over the button */
+        .custom-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button styled with CSS -->
+    <button class="custom-button">Click Me</button>
+
+</body>
+</html>
+
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Navigation Example</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 2000px; /* Make the page long enough to scroll */
+            background-color: #f4f4f4;
+        }
+
+        /* Styling for the buttons */
+        .nav-button {
+            position: fixed;
+            right: 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            padding: 15px 20px; /* Padding inside the button */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Font size */
+            border-radius: 5px; /* Rounded corners */
+            z-index: 1000; /* Ensure it appears above other content */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        /* Positioning the buttons */
+        #scroll-down {
+            bottom: 80px; /* Position for the scroll down button */
+        }
+
+        #scroll-up {
+            bottom: 20px; /* Position for the scroll up button */
+        }
+
+        /* Hover effect for buttons */
+        .nav-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Scroll Up and Down Example</h1>
+
+    <button id="scroll-up" class="nav-button">Scroll Up</button>
+    <button id="scroll-down" class="nav-button">Scroll Down</button>
+
+    <script>
+        // Function to scroll down
+        document.getElementById('scroll-down').addEventListener('click', function() {
+            window.scrollBy({
+                top: 500, // Change this value to scroll down more or less
+                behavior: 'smooth' // Smooth scrolling
+            });
+        });
+
+        // Function to scroll up
+        document.getElementById('scroll-up').addEventListener('click', function() {
+            window.scrollBy({
+                top: -500, // Change this value to scroll up more or less
+                behavior: 'smooth' // Smooth scrolling
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+<a href="home.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="skills.html">Skills</a>
+
+
+
+
+
