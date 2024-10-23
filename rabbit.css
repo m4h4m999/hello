@@ -1,0 +1,27 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #e0f7fa; /* Light blue background */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+/* Rabbit styling */
+.rabbit {
+    width: 100px; /* Width of the rabbit */
+    height: 100px; /* Height of the rabbit */
+    background-image: url('rabbit.gif'); /* Path to your rabbit GIF */
+    background-size: cover; /* Cover the div with the image */
+    position: absolute; /* Absolute positioning for movement */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.2s; /* Smooth transition for movement */
+}
