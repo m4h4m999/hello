@@ -1,218 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-</head>
-<body>
+    <title>CONTACT</title>
 
-<nav>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="skills.html">Skills</a>
-</nav>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moving Rabbit</title>
-    <link rel="stylesheet" href="rabbit.css"> <!-- Link to your CSS file -->
-</head>
-<body>
-
-    <div class="rabbit" id="rabbit"></div> <!-- Rabbit div -->
-
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
-
-</head>
-<body>
-
+    <!-- CSS Styling Directly in HTML -->
     <style>
-        /* Body styles with full background GIF */
-    
-        /* Basic styling for the dropdown */
-        .language-dropdown {
-            margin: 20px;
-            font-family: Arial, sans-serif;
-            position: absolute; /* Position it at the top */
-            bottom: 10px;
-            left: 20px;
-        }
-
-        select {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #f9f9f9;
-        }
-
-        select:hover {
-            background-color: #e9e9e9;
-        }
-
-        /* Container for the buttons to adjust their spacing */
-        .scroll-container {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px; /* Space between the two heart buttons */
-        }
-
-        /* Heart button styling */
-        .heart-btn {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background-color: #ffb6c1; /* Light pink color */
-            transform: rotate(-45deg);
-            cursor: pointer;
-            border: none;
-            outline: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-        }
-
-        /* Create the top rounded parts of the heart */
-        .heart-btn::before, .heart-btn::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background-color: #ffb6c1; /* Same light pink color */
-            border-radius: 50%;
-        }
-
-        /* Left rounded part */
-        .heart-btn::before {
-            top: -30px;
-            left: 0;
-        }
-
-        /* Right rounded part */
-        .heart-btn::after {
-            top: 0;
-            left: 30px;
-        }
-
-        /* Hover effect: Darker pink when hovered */
-        .heart-btn:hover {
-            background-color: #ff69b4;
-        }
-
-        .heart-btn::before:hover, .heart-btn::after:hover {
-            background-color: #ff69b4;
-        }
-
-       
-    </style>
-</head>
-<body>
-
-    <div class="language-dropdown">
-        <label for="language">Choose a language: </label>
-        <select id="language" name="language" onchange="changeLanguage()">
-            <option value="en">English</option>
-            <option value="es">Spanish</option>
-            <option value="fr">French</option>
-            <option value="de">German</option>
-            <option value="zh">Chinese</option>
-            <option value="ja">Japanese</option>
-            <option value="ar">Arabic</option>
-        </select>
-    </div>
-
-
-
-
-    <!-- Scroll Navigation Buttons (Heart Shaped) -->
-    <div class="scroll-container">
-        <!-- Scroll Up Button (Heart) -->
-        <button class="heart-btn" onclick="scrollToTop()">
-            <div class="arrow-up"></div> <!-- CSS-drawn up arrow -->
-        </button>
-
-        <!-- Scroll Down Button (Heart) -->
-        <button class="heart-btn" onclick="scrollToBottom()">
-            <div class="arrow-down"></div> <!-- CSS-drawn down arrow -->
-        </button>
-    </div>
-
-    <script>
-        // JavaScript function to handle language change
-        function changeLanguage() {
-            var selectedLanguage = document.getElementById("language").value;
-            alert("You selected: " + selectedLanguage);
-
-            // Redirect or load content based on selected language
-            // Example: Redirect to a different language version of the site
-            if (selectedLanguage === "en") {
-                window.location.href = "index-en.html"; // English version
-            } else if (selectedLanguage === "es") {
-                window.location.href = "index-es.html"; // Spanish version
-            }
-            // Add more conditions for other languages...
-        }
-
-        // Function to scroll to the top of the page
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Function to scroll to the bottom of the page
-        function scrollToBottom() {
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-
-
-    
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light Pink Background</title>
-    <style>
-        /* CSS to set the background color */
+        /* General Styles */
         body {
-            background-color: #dbaec6; /* Light pink background */
-            font-family: Arial, sans-serif; /* Default font style */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.webp'); /* Insert your background image here */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: rgba(47, 130, 47, 0.8); /* Dark color with 80% opacity */
+            padding: 15px 0; /* Smaller padding */
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 8px 12px; /* Smaller padding for links */
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px; /* Reduced font size */
+        }
+
+        nav a:hover {
+            background-color: rgba(47, 130, 47, 0.8); /* Hover color with transparency */
+            color: #f4f4f4;
+        }
+        footer {
+            background-color: rgba(47, 130, 47, 0.8); /* Dark color with 80% opacity */
+            color: white;
+            text-align: center;
+            padding: 17px 0; /* Smaller padding */
+            font-size: 14px; /* Smaller font size */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
             margin: 0;
             padding: 0;
         }
-    </style>
-    
-    <
-    
-</body>
-</html>
-
-
-
-
-
-
-
 
  
-        
-    
+    </style>
+</head>
+<body>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="skills.html">SKILLS</a>
+    </nav>
+     <!-- Footer -->
+     <footer>
+        &copy; 2024 Maham Ashfaq | All Rights Reserved.
+    </footer>
+
+</body>
+</html>

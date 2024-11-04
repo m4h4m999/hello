@@ -5,182 +5,62 @@
     box-sizing: border-box;
 }
 
-/* Body and HTML settings */
-html, body {
-    height: 100%;
-    font-family: Arial, sans-serif; /* Set font to Arial */
-    
-}
-
-/* Navbar styling */
-nav {
-    position: fixed; /* Keeps the navbar at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #a83472; /* Dark pink navbar */
-    padding: 15px; /* Space around navbar items */
-    text-align: center; /* Center the navbar content */
-    z-index: 1000; /* Ensures navbar is above other content */
-}
-
-/* Navbar links */
-nav a {
-    color: white; /* White text color */
-    text-decoration: none; /* Remove underline */
-    margin: 0 20px; /* Space between links */
-    font-size: 24px; /* Larger font size */
-    font-family: 'Arial', sans-serif; /* Set to Arial */
-    font-weight: bold; /* Bold font weight */
-    position: relative; /* For positioning of hover effects */
-    padding: 5px 10px; /* Padding for clickable area */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Language dropdown styling */
-.language-dropdown {
-    display: inline-block; /* Aligns dropdown next to links */
-    margin-left: 30px; /* Space to the left of the dropdown */
-}
-
-/* Dropdown select styling */
-.language-dropdown select {
-    padding: 10px; /* Padding inside dropdown */
-    font-size: 16px; /* Font size for dropdown text */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Rounded corners */
-    background-color: white; /* White background for dropdown */
-    color: #b93980; /* Pink color for dropdown text */
-    font-weight: bold; /* Bold font in dropdown */
-    font-family: Arial, sans-serif; /* Set font to Arial */
-}
-
-/* Add hover effect to navbar links */
-nav a:hover {
-    color: #ff69b4; /* Light pink hover color */
-}
-
-/* Main content area */
-main {
-    padding-top: 80px; /* Space below the fixed navbar */
-    padding: 20px; /* Additional padding for main content */
-}
-
-
-/* Basic styling for the dropdown */
-.language-dropdown {
-    margin: 20px;
+/* Body Styling */
+body {
     font-family: Arial, sans-serif;
-    position: absolute; /* Position it at the top */
-    bottom: 10px;
-    left: 20px;
-}
-
-select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-}
-
-select:hover {
-    background-color: #e9e9e9;
-}
-
-/* Container for the buttons to adjust their spacing */
-.scroll-container {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Space between the two heart buttons */
+    background-image: url('bg.webp'); /* Insert your background image here */
+    background-size: cover;
+    background-position: center;
 }
 
-/* Heart button styling */
-.heart-btn {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background-color: #ffb6c1; /* Light pink color */
-    transform: rotate(-45deg);
-    cursor: pointer;
-    border: none;
-    outline: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Create the top rounded parts of the heart */
-.heart-btn::before, .heart-btn::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: #ffb6c1; /* Same light pink color */
-    border-radius: 50%;
-}
-
-/* Left rounded part */
-.heart-btn::before {
-    top: -30px;
-    left: 0;
-}
-
-/* Right rounded part */
-.heart-btn::after {
+/* Navigation Bar Styling */
+nav {
+    background-color: rgba(47, 130, 47, 0.8); /* Light green with transparency */
+    position: fixed; /* Fixed to stay at the top */
     top: 0;
-    left: 30px;
-}
-
-/* Hover effect: Darker pink when hovered */
-.heart-btn:hover {
-    background-color: #ff69b4;
-}
-
-.heart-btn::before:hover, .heart-btn::after:hover {
-    background-color: #ff69b4;
-}
-
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Ensure the body covers the full height */
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Main content area should take up the remaining space */
-main {
-    flex-grow: 29;
-}
-
-/* Footer styling */
-footer {
-    background-color: rgb(222, 144, 205); /* Footer background color */
-    color: white; /* Text color */
-    text-align: center;
-    padding: 20px; /* Padding around the text */
-    font-size: 18px; /* Adjust font size */
+    left: 0;
     width: 100%;
-    position: relative;
-    bottom: 0;
-    font-family: Arial, sans-serif; /* Set the font */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 100; /* Ensures the navbar stays above other content */
 }
 
-/* Footer text styling */
-footer p {
-    font-size: 20px; /* Increase the size of the text */
-    font-weight: bold; /* Make the text bold */
-    margin: 0;
+nav a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fffacd; /* Light yellow hover effect */
+}
+
+/* Main content styling */
+.content {
+    flex: 1;
+    padding-top: 70px; /* To avoid content going under the fixed navbar */
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(47, 130, 47, 0.8) ; /* Light green with transparency */
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 30px;
+    position: fixed; /* Fixed to stay at the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Ensure footer stays at the bottom on short content pages */
+html {
+    height: 100%;
 }
 
