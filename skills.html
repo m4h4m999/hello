@@ -3,8 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maham Ashfaq's Website</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>CONTACT</title>
+
+    <!-- CSS Styling Directly in HTML -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.webp'); /* Insert your background image here */
+            background-size: cover;
+            background-position: center;
+            color: #ff66b2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: rgba(47, 130, 47, 0.8);
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            background-color: rgba(47, 130, 47, 0.8);
+            color: #f4f4f4;
+        }
+
+        /* Rabbit Container */
+        #rabbit-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #rabbit {
+            width: 100px;
+            transition: transform 0.3s ease;
+        }
+
+        #description {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Skills Container */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 20px;
+            padding: 20px;
+            width: 80%; /* Adjust width as needed */
+        }
+
+        .skill-box {
+            background-color: #ffe6f2;
+            border: 2px solid #ff99cc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 15px; /* Reduced padding */
+            text-align: center;
+            font-size: 16px;
+            color: #ff66b2;
+            animation: float 4s ease-in-out infinite;
+            height: 140px; /* Smaller height */
+        }
+
+        .skill-box h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #ff66b2;
+        }
+
+        .skill-box p {
+            font-size: 13px;
+            color: #cc6699;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(47, 130, 47, 0.8);
+            color: white;
+            text-align: center;
+            padding: 17px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,10 +120,38 @@
         <a href="skills.html">SKILLS</a>
     </nav>
 
-    <!-- Main Content -->
-    <div class="content">
-        <h1>Welcome to Maham Ashfaq's Website</h1>
-        <p>This is your amazing content!</p>
+    <!-- Rabbit Container -->
+    <div id="rabbit-container">
+        <img id="rabbit" src="rabbit.gif" alt="Moving Rabbit">
+        <div id="description">Click the rabbit! 🌸 Chase it!!!!</div>
+    </div>
+
+    <!-- Main Content with Floating Skills Boxes in 2x3 Layout -->
+    <div class="skills-container">
+        <div class="skill-box">
+            <h3>🌸 Analytical Skills 🌸</h3>
+            <p>Ability to analyze data, identify trends, and make informed decisions.</p>
+        </div>
+        <div class="skill-box">
+            <h3>🌈 Proficient in Team and Individual Work 🌈</h3>
+            <p>Have done multiple group projects in University as well as completing individual assessments.</p>
+        </div>
+        <div class="skill-box">
+            <h3>📊 Data Analysis 📊</h3>
+            <p>Skilled in data visualization and statistical analysis using tools like Excel and Power BI.</p>
+        </div>
+        <div class="skill-box">
+            <h3>💻 Programming 💻</h3>
+            <p>Beginner knowledge on programming languages including HTML, Java, CSS.</p>
+        </div>
+        <div class="skill-box">
+            <h3>✍️ Creative Design ✍️</h3>
+            <p>Passionate about creating visually appealing designs, also love to paint.</p>
+        </div>
+        <div class="skill-box">
+            <h3>🧩 Problem Solving 🧩</h3>
+            <p>Innovative in approaching complex challenges with critical and strategic thinking.</p>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -27,6 +159,21 @@
         &copy; 2024 Maham Ashfaq | All Rights Reserved.
     </footer>
 
+    <!-- JavaScript for Rabbit Movement -->
+    <script>
+        const rabbit = document.getElementById('rabbit');
+        let moveCount = 0; // Track the number of moves
+
+        rabbit.addEventListener('click', () => {
+            if (moveCount < 3) {
+                moveCount++;
+                rabbit.style.transform = `translateX(${3 * moveCount}cm)`; // Moves left by 3cm each click
+            } else {
+                rabbit.style.transform = 'translateX(0)'; // Reset position after 3 moves
+                moveCount = 0;
+            }
+        });
+    </script>
+
 </body>
 </html>
-
